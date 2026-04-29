@@ -14,7 +14,7 @@ It is a functional password generator
 - useState → manage UI state (length, options, password)  
 - useEffect → auto-generate password on changes  
 - useCallback → memoize functions for performance  
-- useRef → access input field for copy/select  
+- useRef → access input field for copy/select
 
 ## Tech Stack
 - React  
