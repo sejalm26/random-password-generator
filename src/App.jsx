@@ -10,9 +10,10 @@ const App = () => {
 
   const [password, setPassword] = useState('');
 
-  //useRef 
+  //useRef to reference the password input field and select the text when copying to clipboard
   const passwordRef = useRef(null)
 
+  //useCallback to memoize the function and prevent unnecessary re-renders
   const generatePassword = useCallback(() => {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -48,6 +49,7 @@ const App = () => {
     });
   }, [password])
 
+  //useEffect to generate a new password whenever the length, numAllowed or charAllowed state changes
   useEffect(() => {
     generatePassword()
   }, [length, numAllowed, charAllowed, generatePassword])
